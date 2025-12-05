@@ -60,7 +60,7 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 0;
+  gap: 8px;
 }
 
 .logo {
@@ -69,17 +69,9 @@ header {
   gap: 0;
 }
 
-/* espaço para logo em imagem */
 .logo-img {
   height: 40px;
   max-height: 40px;
-  margin: 0;
-  padding: 0;
-}
-
-.logo > div {
-  margin: 0;
-  padding: 0;
 }
 
 .logo-mark {
@@ -114,6 +106,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
 }
 
 nav a {
