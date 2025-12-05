@@ -70,24 +70,12 @@ function criarTabelaSimples(container, dados) {
 
     const tdPos = document.createElement("td");
     const pos = idx + 1;
-    if (pos <= 3) {
-      const medal = document.createElement("span");
-      medal.className = "rank-medal";
-      const bolinha = document.createElement("span");
-      const label = document.createElement("span");
-      if (pos === 1) {
-        bolinha.className = "gold";
-        label.textContent = "1º";
-      } else if (pos === 2) {
-        bolinha.className = "silver";
-        label.textContent = "2º";
-      } else {
-        bolinha.className = "bronze";
-        label.textContent = "3º";
-      }
-      medal.appendChild(bolinha);
-      medal.appendChild(label);
-      tdPos.appendChild(medal);
+    if (pos === 1) {
+      tdPos.textContent = "🥇 1º";
+    } else if (pos === 2) {
+      tdPos.textContent = "🥈 2º";
+    } else if (pos === 3) {
+      tdPos.textContent = "🥉 3º";
     } else {
       tdPos.textContent = `${pos}º`;
     }
