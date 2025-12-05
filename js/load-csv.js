@@ -98,6 +98,78 @@ function criarTabelaSimples(container, dados) {
   container.appendChild(tabela);
 }
 
+/* HOME: Top 3 do ano mais recente */
+
+async function inicializarHomeTop3() {
+  const cont = document.getElementById("top3-container");
+  const spanAno = document.getElementById("top3-ano");
+  const msg = document.getElementById("top3-msg");
+  if (!cont || !spanAno) return;
+
+  try {
+    const dados = await carregarCsv("data/ranking.csv");
+    if (!dados.length) {
+      msg.textContent = "Ainda não há dados cadastrados para o circuito.";
+      return;
+    }
+
+    const anos = obterAnosUnicos(dados);
+    if (!anos.length) {
+      msg.textContent = "Não foi possível identificar o ano no arquivo.";
+      return;
+    }
+
+    const anoMaisRecente = anos[0];
+    spanAno.textContent = String(anoMaisRecente);
+
+    const geral = filtrarPorAnoESegmento(dados, anoMaisRecente, "Geral");
+    const ordenados = ordenarPorPontuacaoDesc(geral);
+    const top3 = ordenados.slice(0, 3);
+
+    cont.innerHTML = "";
+
+    if (!top3.length) {
+      msg.textContent = "Não há dados de ranking geral para este ano.";
+      return;
+    }
+
+    top3.forEach((linha, idx) => {
+      const row = document.createElement("div");
+      row.className = "top3-row";
+
+      const left = document.createElement("div");
+      left.className = "top3-left";
+
+      const medal = document.createElement("div");
+      medal.className = "top3-medal";
+      if (idx === 0) medal.textContent = "🥇";
+      else if (idx === 1) medal.textContent = "🥈";
+      else medal.textContent = "🥉";
+
+      const nome = document.createElement("div");
+      nome.className = "top3-name";
+      nome.textContent = linha.Pessoa || "";
+
+      left.appendChild(medal);
+      left.appendChild(nome);
+
+      const pontos = document.createElement("div");
+      pontos.className = "top3-points";
+      const valor = parseFloat(linha.Pontuacao || "0");
+      pontos.textContent = isNaN(valor) ? "" : `${valor.toFixed(2)} pts`;
+
+      row.appendChild(left);
+      row.appendChild(pontos);
+      cont.appendChild(row);
+    });
+
+    msg.textContent = "Baseado no ranking geral do circuito.";
+  } catch (err) {
+    console.error(err);
+    msg.textContent = "Erro ao carregar o Top 3. Verifique o arquivo data/ranking.csv.";
+  }
+}
+
 /* Página: ranking geral */
 
 async function inicializarRankingGeral() {
@@ -207,7 +279,9 @@ async function inicializarMestres() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
-  if (page === "ranking-geral") {
+  if (page === "home") {
+    inicializarHomeTop3();
+  } else if (page === "ranking-geral") {
     inicializarRankingGeral();
   } else if (page === "mestres") {
     inicializarMestres();

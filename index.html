@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body data-page="home">
   <header>
     <div class="header-inner">
       <div class="logo">
@@ -83,6 +83,20 @@
           <span>Edição atual: 2025 · Circuito em construção contínua</span>
         </div>
       </aside>
+    </section>
+
+    <!-- NOVA SEÇÃO: Top 3 do ano -->
+    <section class="section">
+      <h2>Top 3 do circuito em <span id="top3-ano">–</span></h2>
+      <p>
+        As três pessoas cervejeiras com maior pontuação no ranking geral do circuito, somando
+        os resultados dos concursos de Maringá e Curitiba.
+      </p>
+
+      <div id="top3-container" class="top3-card">
+        <!-- preenchido via JavaScript -->
+      </div>
+      <div id="top3-msg" class="message"></div>
     </section>
 
     <section class="section">
@@ -184,5 +198,7 @@
   <footer>
     CPCCC – Circuito Paranaense de Concursos de Cerveja Caseira · CONCERVA Maringá &amp; ACervA Paranaense
   </footer>
+
+  <script src="js/load-csv.js" defer></script>
 </body>
 </html>
