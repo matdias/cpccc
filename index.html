@@ -10,7 +10,8 @@
   <header>
     <div class="header-inner">
       <div class="logo">
-        <!-- Quando tiver a logo, troque para <img src="img/logo-header.svg" alt="CPCCC" class="logo-img" /> -->
+        <!-- Quando tiver a logo, troque pela imagem abaixo -->
+        <!-- <img src="img/logo-header.svg" alt="CPCCC" class="logo-img" /> -->
         <div class="logo-mark">CP</div>
         <div>
           <div class="logo-text-main">Circuito Paranaense</div>
@@ -29,19 +30,21 @@
     <section class="hero">
       <div class="hero-card">
         <div class="hero-logo">
-          <!-- Aqui você pode colocar uma versão horizontal da logo -->
+          <!-- Se quiser, use uma versão horizontal da logo aqui -->
           <!-- <img src="img/logo-hero.svg" alt="CPCCC" /> -->
-          <h1>CPCCC – Circuito Paranaense de Concursos de Cerveja Caseira</h1>
+          <div>
+            <div class="hero-tagline">🍺 CPCCC 2025</div>
+            <h1>Os destaques da cerveja caseira no Paraná</h1>
+          </div>
         </div>
 
-        <p>
-          O CPCCC reúne os resultados dos concursos de cerveja caseira realizados pela
-          CONCERVA Maringá e pela ACERVA Paranaense em Curitiba, destacando as pessoas
-          cervejeiras que mais se sobressaem ao longo do ano.
+        <p class="hero-highlight">
+          O CPCCC reúne os resultados dos concursos de cerveja caseira organizados pela
+          CONCERVA Maringá e pela ACervA Paranaense em Curitiba, em um único circuito anual.
         </p>
         <p>
-          A pontuação considera as notas das súmulas dos juízes e bônus por medalhas e
-          participações em Best of Show, consolidando tudo em um ranking anual.
+          A cada edição, as notas das súmulas e os bônus por medalhas se transformam em
+          pontuação para definir o ranking geral e os Mestres de cada escola cervejeira.
         </p>
 
         <div class="hero-meta">
@@ -52,7 +55,7 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="ranking.html">
-            Ver ranking geral
+            Ver ranking geral 2025
           </a>
           <a class="btn btn-secondary" href="categorias.html">
             Ver mestres por estilo
@@ -62,62 +65,125 @@
 
       <aside class="hero-side">
         <div>
-          <div class="hero-side-title">Panorama</div>
-          <div class="hero-side-main">Os nomes que fizeram história no circuito.</div>
+          <div class="hero-side-title">Panorama do circuito</div>
+          <div class="hero-side-main">Quem brilhou nos copos paranaenses.</div>
           <div class="hero-side-sub">
-            Consolidação dos concursos da CONCERVA Maringá e da ACERVA Paranaense em um
-            único ranking, atualizado a cada edição do circuito.
+            Consolidação dos concursos da CONCERVA Maringá e da ACervA Paranaense, com
+            classificação geral e por escolas cervejeiras.
           </div>
 
           <ul class="hero-list">
-            <li>Ranking geral por ano.</li>
-            <li>Mestres das escolas: alemã, americana, belga, inglesa e especialidade.</li>
-            <li>Baseado em notas de súmula e bônus por medalha.</li>
+            <li>Ranking geral por ano (Geral).</li>
+            <li>Mestre das Alemãs, Americanas, Belgas, Inglesas e Especialidade.</li>
+            <li>Baseado em notas de súmula e bônus por medalhas e BOS.</li>
           </ul>
         </div>
 
         <div class="hero-year-pill">
           <span class="hero-year-dot"></span>
-          <span>Últimas edições disponíveis · CPCCC</span>
+          <span>Edição atual: 2025 · Circuito em construção contínua</span>
         </div>
       </aside>
     </section>
 
     <section class="section">
-      <h2>Como o circuito funciona</h2>
+      <h2>Concursos que fazem parte do circuito</h2>
       <p>
-        O circuito consolida a performance das pessoas cervejeiras que inscrevem suas
-        amostras nos concursos de Maringá e Curitiba ao longo do ano.
+        O circuito é formado pela soma de desempenho das pessoas cervejeiras nos concursos
+        oficiais das associações participantes.
       </p>
 
-      <div class="card-grid">
-        <article class="card">
-          <h3>Base em súmulas</h3>
-          <p>
-            Cada amostra recebe uma nota média nas súmulas dos juízes, que é convertida em
-            pontuação para o circuito.
+      <div class="concursos">
+        <div class="concursos-row">
+          <a
+            class="concursos-link"
+            href="https://beerawardsplatform.com/v-concurso-paranaense-de-cerveja-caseira-maringa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>🍻 Concurso de Maringá · CONCERVA</div>
+            <span>Beer Awards Platform</span>
+          </a>
+
+          <a
+            class="concursos-link"
+            href="https://beerawardsplatform.com/paranaense25"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>🍻 Concurso de Curitiba · ACervA PR</div>
+            <span>Beer Awards Platform</span>
+          </a>
+        </div>
+
+        <div class="concursos-tag">
+          os resultados desses concursos alimentam o ranking do circuito.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Regulamento do circuito</h2>
+      <p>
+        O regulamento detalha como as notas são convertidas em pontuação, quais são os
+        critérios de desempate e como são definidas as categorias de Mestres por escola.
+      </p>
+
+      <div class="regulamento-grid">
+        <div class="regulamento-thumb">
+          <div class="regulamento-badge">Regulamento oficial</div>
+          <!-- Quando tiver uma imagem da capa, coloque aqui:
+          <img src="img/regulamento-capa.png" alt="Capa do regulamento do CPCCC 2025" />
+          -->
+          <div class="regulamento-thumb-fallback">
+            Imagem da capa do regulamento<br />
+            (substitua este bloco por uma imagem em <code>img/regulamento-capa.png</code>).
+          </div>
+        </div>
+        <div>
+          <p class="regulamento-text">
+            Você pode consultar o documento completo do regulamento do CPCCC, incluindo a
+            metodologia de pontuação, pesos de súmulas, bônus por medalhas, BOS e critérios de
+            elegibilidade.
           </p>
-        </article>
-        <article class="card">
-          <h3>Bônus por medalhas</h3>
-          <p>
-            Medalhas e participações em Best of Show geram pontos extras, premiando quem
-            chega mais longe em cada concurso.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Mestres por escola</h3>
-          <p>
-            Além do ranking geral, o circuito destaca Mestres das Alemãs, Americanas,
-            Belgas, Inglesas e Cervejas de Especialidade.
-          </p>
-        </article>
+          <div class="hero-actions" style="margin-top: 10px;">
+            <a
+              class="btn btn-primary"
+              href="https://drive.google.com/file/d/1D8QLvKdYZpmrV-tXKOU6VxO8LHHVYYRe/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir regulamento (PDF)
+            </a>
+          </div>
+
+          <div class="social-links" style="margin-top: 14px;">
+            <strong>Associações participantes:</strong><br />
+            🍺 CONCERVA Maringá –
+            <a
+              href="https://www.instagram.com/concervamga1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @concervamga1
+            </a>
+            <br />
+            🍺 ACervA Paranaense –
+            <a
+              href="https://www.instagram.com/acerva_paranaense/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @acerva_paranaense
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    CPCCC – Circuito Paranaense de Concursos de Cerveja Caseira · CONCERVA Maringá &amp; ACERVA Paranaense
+    CPCCC – Circuito Paranaense de Concursos de Cerveja Caseira · CONCERVA Maringá &amp; ACervA Paranaense
   </footer>
 </body>
 </html>
