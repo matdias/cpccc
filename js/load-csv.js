@@ -85,7 +85,7 @@ function criarTabelaSimples(container, dados) {
 
     const tdPontos = document.createElement("td");
     const valor = parseFloat(linha.Pontuacao || "0");
-    tdPontos.textContent = isNaN(valor) ? "" : valor.toFixed(2);
+    tdPontos.textContent = isNaN(valor) ? "" : valor.toFixed(2).replace(".", ",");
 
     tr.appendChild(tdPos);
     tr.appendChild(tdPessoa);
@@ -156,7 +156,7 @@ async function inicializarHomeTop3() {
       const pontos = document.createElement("div");
       pontos.className = "top3-points";
       const valor = parseFloat(linha.Pontuacao || "0");
-      pontos.textContent = isNaN(valor) ? "" : `${valor.toFixed(2)} pts`;
+      pontos.textContent = isNaN(valor) ? "" : `${valor.toFixed(2).replace(".", ",")} pts`;
 
       row.appendChild(left);
       row.appendChild(pontos);
