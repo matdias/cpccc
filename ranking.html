@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ranking geral – CPCCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="ranking-geral">
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <!-- Trocar pelo <img> quando tiver logo -->
+        <div class="logo-mark">CP</div>
+        <div>
+          <div class="logo-text-main">Circuito Paranaense</div>
+          <div class="logo-text-sub">Cerveja Caseira</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="ranking.html">Ranking geral</a>
+        <a href="categorias.html">Mestres por estilo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="table-container">
+        <div class="table-header">
+          <div class="table-title">Ranking geral do circuito</div>
+          <div class="table-controls">
+            <span>Ano:</span>
+            <select id="select-ano-geral"></select>
+          </div>
+        </div>
+        <div id="tabela-geral"></div>
+        <div id="mensagem-geral" class="message"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    CPCCC – Circuito Paranaense de Concursos de Cerveja Caseira · CONCERVA Maringá &amp; ACERVA Paranaense
+  </footer>
+
+  <script src="js/load-csv.js" defer></script>
+</body>
+</html>

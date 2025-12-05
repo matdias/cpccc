@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mestres por estilo – CPCCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="mestres">
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <!-- Trocar pelo <img> quando tiver logo -->
+        <div class="logo-mark">CP</div>
+        <div>
+          <div class="logo-text-main">Circuito Paranaense</div>
+          <div class="logo-text-sub">Cerveja Caseira</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="ranking.html">Ranking geral</a>
+        <a href="categorias.html">Mestres por estilo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="table-header" style="margin-bottom: 10px;">
+        <div class="table-title">Mestres por escola cervejeira</div>
+        <div class="table-controls">
+          <span>Ano:</span>
+          <select id="select-ano-mestres"></select>
+        </div>
+      </div>
+      <p class="message">
+        Cada tabela mostra a classificação para uma das escolas, considerando apenas as
+        amostras válidas para aquele segmento no ano selecionado.
+      </p>
+
+      <div class="mestres-grid">
+        <div class="table-container">
+          <div class="table-title">Mestre das Alemãs</div>
+          <div class="tabela-mestre" data-segmento="Mestre das Alemãs"></div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-title">Mestre das Americanas</div>
+          <div class="tabela-mestre" data-segmento="Mestre das Americanas"></div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-title">Mestre das Belgas</div>
+          <div class="tabela-mestre" data-segmento="Mestre das Belgas"></div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-title">Mestre das Inglesas</div>
+          <div class="tabela-mestre" data-segmento="Mestre das Inglesas"></div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-title">Mestre das Cervejas de Especialidade</div>
+          <div class="tabela-mestre" data-segmento="Mestre das Cervejas de Especialidade"></div>
+        </div>
+      </div>
+
+      <div id="mensagem-mestres" class="message" style="margin-top: 12px;"></div>
+    </section>
+  </main>
+
+  <footer>
+    CPCCC – Circuito Paranaense de Concursos de Cerveja Caseira · CONCERVA Maringá &amp; ACERVA Paranaense
+  </footer>
+
+  <script src="js/load-csv.js" defer></script>
+</body>
+</html>
