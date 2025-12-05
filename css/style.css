@@ -71,8 +71,8 @@ header {
 
 /* espaço para logo em imagem */
 .logo-img {
-  height: 32px;
-  max-height: 32px;
+  height: 40px;
+  max-height: 40px;
 }
 
 .logo-mark {
@@ -160,8 +160,8 @@ main {
 }
 
 .hero-logo img {
-  height: 40px;
-  max-height: 40px;
+  height: 60px;
+  max-height: 72px;
 }
 
 .hero-tagline {
