@@ -627,6 +627,7 @@ footer {
   .logo-img {
     width: 48px;
     height: auto;
+    max-height: none;
   }
 
   .logo-text-main {
