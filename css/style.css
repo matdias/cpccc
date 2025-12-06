@@ -482,7 +482,8 @@ main {
 }
 
 .social-links {
-  margin-top: 14px;
+  margin-top: 8px;
+  margin-bottom: 12px;
   font-size: 14px;
 }
 
@@ -634,6 +635,15 @@ footer {
     gap: 4px;
     flex-direction: row;
     align-items: center;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
   }
 
   .logo {
