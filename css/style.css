@@ -635,53 +635,39 @@ footer {
 
 @media (max-width: 480px) {
 
-
   .header-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
 
-  nav {
-    width: 100%;
-    order: 2;
-    margin-left: 0;
-    margin-top: 8px;
-    justify-content: flex-start;
-  }
-
   .logo {
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
-    flex-shrink: 1;
-    gap: 4px;
     white-space: nowrap;
+    order: 1;
   }
 
   .logo-img {
     width: 28px;
     height: auto;
-    flex-shrink: 0;
   }
 
   .logo-text-main {
     font-size: 14px;
-    line-height: 1.1;
-    white-space: nowrap;
-    flex-shrink: 1;
   }
 
   .logo-text-sub {
     font-size: 9px;
-    line-height: 1.1;
-    white-space: nowrap;
-    flex-shrink: 1;
   }
 
-  .logo,
-  .logo-text-main,
-  .logo-text-sub {
-    order: 1;
+  nav {
+    width: 100%;
+    order: 2;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
   }
 }
