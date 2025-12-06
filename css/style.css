@@ -632,6 +632,8 @@ footer {
 
   .header-inner {
     gap: 4px;
+    flex-direction: row;
+    align-items: center;
   }
 
   .logo {
