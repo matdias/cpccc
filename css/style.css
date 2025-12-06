@@ -581,6 +581,23 @@ tbody tr:hover {
   gap: 14px;
 }
 
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #15803d;
+  font-weight: 500;
+}
+
+.insta-link:hover {
+  color: #166534;
+}
+
+.insta-icon {
+  width: 18px;
+  height: 18px;
+}
+
 /* Footer */
 
 footer {
