@@ -610,3 +610,29 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 36px;
+    height: auto;
+  }
+
+  .logo-text-main {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .logo-text-sub {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  .header-inner {
+    gap: 6px;
+  }
+
+  .logo-text-main,
+  .logo-text-sub {
+    font-weight: 500;
+  }
+}
